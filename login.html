@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+</head>
+<body>
+<script>
+    let userName= prompt("Bạn là ai vậy?",'');
+    if(userName==="admin") {
+        let pass = prompt("Mật khẩu:", '');
+        if (pass === "trong01") {
+            alert('chào mừng bạn')
+        }else if (pass== null){
+            alert("Canceled")
+        }else{ alert('Sai mật khẩu')}
+        }
+     else if (userName== null){
+        alert('Canceled');
+    }else {alert('tôi không biết bạn')
+    }
+
+</script>
+</body>
+</html>
