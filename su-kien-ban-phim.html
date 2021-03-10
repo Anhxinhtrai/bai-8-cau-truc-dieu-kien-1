@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sự kiện bán phím</title>
+</head>
+<body  onLoad="docReady()">
+<img id="anh" src="../img/img.png" alt="ảnh" style="position:absolute;left:0; top:0;" height="100" width="80">
+<script>
+    function phimLen(){
+        let element = document.getElementById('anh');
+        element.style.top=parseInt( element.style.top) +5 + 'px';
+    }
+    function phimXuong(){
+        var element = document.getElementById('anh');
+        element.style.top=parseInt( element.style.top) -5 + 'px';
+    }
+    function phimTrai(){
+        var element = document.getElementById('anh');
+        element.style.left=parseInt(element.style.left) -5 + 'px';
+    }
+    function phimPhai(){
+        var element = document.getElementById('anh')
+        element.style.left=parseInt(element.style.left)+ 5 + 'px';
+    }
+    function nhanPhim(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                phimTrai()
+                break;
+            case 39:
+                phimPhai()
+                break;
+            case 40:
+                phimLen()
+                break;
+            case 38:
+                phimXuong()
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', nhanPhim);
+    }
+</script>
+</body>
+</html>
