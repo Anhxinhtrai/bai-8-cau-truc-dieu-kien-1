@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính đơn giản</title>
+</head>
+<body>
+    <input type="number" id="a">
+    <input type="number" id="b"><br>
+
+
+    <button id="cong" onclick="tinh(this)">Cộng +</button>
+    <button id="tru" onclick="tinh(this)">Trừ -</button>
+    <button id="nhan" onclick="tinh(this)">Nhân *</button>
+    <button id="chia" onclick="tinh(this)">Chia /</button>
+
+    <p>Kết quả : <span id="result" >0</span></p>
+
+<script>
+    function tinh(phepTinh) {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let resutl = 0;
+
+        switch (phepTinh.innerText) {
+            case "Cộng +":
+                resutl = a + b;
+                document.getElementById('result').innerText =resutl.toFixed(3) +'';
+                break;
+            case "Trừ -":
+                result = a - b;
+                document.getElementById('result').innerText = result.toFixed(3) + '';
+                break;
+            case "Nhân *":
+                result = a * b;
+                document.getElementById('result').innerText = result.toFixed(3) + '';
+                break;
+            case "Chia /":
+                result = a / b;
+                document.getElementById('result').innerText = result.toFixed(3) +'';
+                break;
+        }
+    }
+</script>
+</body>
+</html>
