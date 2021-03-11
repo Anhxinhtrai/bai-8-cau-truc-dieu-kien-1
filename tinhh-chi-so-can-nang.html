@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<label for="weight">Cân nặng của bạn là:</label>
+<input type="number" id="weight">
+<label for="height">Chiều cao của bạn là:</label>
+<input type="number" id="height">
+<p id="hienthi"></p>
+<button onclick="tinh()">Tính</button>
+<script>
+    function tinh() {
+        let nang = +document.getElementById('weight').value;
+        let cao = +document.getElementById('height').value;
+        let bmi = nang / (cao ** 2);
+        if (bmi < 18){
+            document.getElementById('hienthi').innerText = 'Gầy quá rồi';}
+        else if (bmi < 25.0) {
+            document.getElementById('hienthi').innerText = 'Thon Thon minhoon';}
+         else if (bmi < 30.0) {
+            document.getElementById('hienthi').innerText = 'beo';
+        } else {
+            document.getElementById('hienthi').innerText = 'beo phi';
+        }
+    }
+</script>
+</body>
+</html>
