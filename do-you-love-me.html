@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+</head>
+<script type="text/javascript">
+    function Yes(){
+        alert("Biết mừ")
+    }
+    function No(){
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById("btnNo").style.left = x + 'px';
+        document.getElementById("btnNo").style.left = y + 'px';
+        }
+</script>
+<body>
+<h1> Iêu Trọng hoogg</h1>
+<input type="button" value="Có <3" onclick="Yes()">
+<input type="button" value="Kooo" id="btnNo" onmouseover="No()" style="position:absolute;">
+</body>
+</html>
